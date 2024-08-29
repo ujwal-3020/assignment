@@ -1,0 +1,6 @@
+List out some weird behaviors of Javascript.
+
+type coercion
+floating point math accuracy
+comparison
+hoisting and many more

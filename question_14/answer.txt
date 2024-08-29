@@ -1,0 +1,35 @@
+Your job is to define the structure that will be followed by your teammates to work on the project. Define an efficient structure for a real time project that has three environments dev. stage and prod. How will you create and manage features, releases and hotfixes in this workflow?
+
+1. Branching Strategy
+    1.1 main branches :
+        - main
+        - devlop
+    1.2 Supporting branches :
+        - features branches
+        - releases branches
+        - hotfixes branches
+
+
+
+
+# FEATURE DEVELOPMENT WORKFLOW 
+    - create a feature branch (feature/feature-name)
+    - develop feature
+    - testing
+    - merge
+
+
+# RELEASE WORKFLOW 
+    - create a release branch (release/vX.X.X)
+    - prepare for release
+    - release to stage
+    - merge
+    - deploy to prod
+
+
+# HOTFIX WORKFLOW 
+    - create a hotfix branch (hotfix/hotfix-name)
+    - commit
+    - testing
+    - merge
+    - deploy to prod

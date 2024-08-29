@@ -1,0 +1,46 @@
+Showcase different merging strategies in git including visual demonstration of those strategies.
+
+1. FAST FORWARD MERGE
+
+    - A fast forward merge occurs when the branch being merged can be fast forwarded to the target branch because there have been no
+      divergent commits
+
+    BEFORE MERGE : A-B-C
+                      \
+                       D-E
+
+    AFTER MERGE : A-B-C-D-E
+
+
+2. THREE WAY MERGE
+    - A three way merge occurs when the branch being merged has diverged from the target branch. Git creates a new commit to combine changes from both branches
+
+    BEFORE MERGE : A-B-C
+                      \
+                       D-E
+
+    AFTER MERGE : A-B-C---F
+                     \   /
+                      D-E
+
+
+3. SQUASH MERGE
+    - It combines all commits from the source branch into single commit and applies it to the target branch. This is useful for keeping a clean history
+
+    BEFORE MERGE : A-B-C
+                      \
+                       D-E-F
+
+    AFTER MERGE : A-B-C-G
+                       /  
+                      D-E-F
+
+
+4. REBASE MERGE
+    - Rebasing involves applying commits from one branch onto another, effectively rewriting the commit history
+
+    BEFORE REBASE : A-B-C (main)
+                      \
+                       D-E (feature)
+
+    AFTER REBASE : A-B-C-D'-E' (feature)

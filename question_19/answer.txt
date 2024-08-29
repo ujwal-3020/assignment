@@ -1,0 +1,21 @@
+Prepare a demo on how the git submodule works along with use cases for the same.
+
+STEPS
+
+1. Setup a main repo
+    - create repo
+    - commit
+2. Create a submodule repo
+    - create a new repo for submodule
+    - commit
+    - Push to remote
+        -- git remote add origin <remote-url-of-submodule-repo>
+        -- git push -u origin master
+3. Add the submodule to the main repo
+    - add submodule (first go to main-repo)
+        -- git submodule add <remote-url-of-submodule-repo> submodule-dir
+            This command clones submodule repo to submodule-dir inside main repo
+    - initialize and update submodule   
+        -- git submodule update --init --recursive
+    - commit
+        -- git add .gitmodules submodule-dir

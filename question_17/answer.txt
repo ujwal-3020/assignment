@@ -1,0 +1,20 @@
+Someone has accidentally pushed the .env file. Your job is to remove the .env file and make sure the file is also not accessible using github.
+- For the latest commit
+- For the old commit
+
+
+STEPS : 
+
+# FOR THE LATEST COMMIT
+
+1. Remove .env file
+    - git rm .env
+2. Commit changes
+3. Push the changes
+
+
+# FOR THE OLD COMMIT
+
+1. Backup repo
+    - git branch backup
+2. git filter-branch --force --index-filter "git rm -rf --cached --ignore-unmatch .env" HEAD

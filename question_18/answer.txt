@@ -1,0 +1,20 @@
+You deleted a branch and later found that there are commits which need to be recovered. Define the approach and solution for this.
+
+# CHECK THE REFLOG
+
+1. View reflog
+    - git reflog
+2. Identify the commit hash
+3. Create a new branch from the commit
+    - git checkout -b <new-branch-name> <commit-hash>
+4. git push origin <new-branch-name>
+
+
+# RECOVER FROM A BACKUP
+
+1. Locate the backup repo
+2. Fetch the deleted branch
+    - git fetch <backup-repo> <deleted-branch-name>
+3. Create a new branch
+    - git checkout -b <new-branch-name> <commit-hash-from-backup>
+4. git push origin <new-branch-name>

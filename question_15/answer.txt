@@ -1,0 +1,19 @@
+Consider a scenario where some devs have committed a number of commits in the main branch. Your job is to restructure the commit history to follow the conventional commit messages and squash the commits that are of the same modules.
+Also set-up a pre-commit hook that checks this for next occurrences.
+
+STEPS : 
+
+1. Identify the number of commits.
+2. Start Interactive rebase
+    - git rebase -i HEAD-<commit-numbers>
+3. Rebase and Restructure the commits
+    - Pick a commit that you want to be the final commit and squash other commits after that into that particular commit
+4. Save & Exit and write the final commit message in the editor that git open for you
+5. Force push the rewritten history
+    - git push origin <branch-name> --force
+
+
+
+
+
+# I DON'T KNOW HOW TO SETUP PRE HOOKS
