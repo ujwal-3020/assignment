@@ -8,16 +8,7 @@ exports.getAllMovies = async (req, res) => {
                                 .sort()
                                 .paginate();
         let movies = await features.query;
-
-        /**************Mongoose 6.0 or less************** 
-        const excludeFields = ['sort', 'page', 'limit', 'fields'];
-        const queryObj = {...req.query};
-        excludeFields.forEach((el) => {
-            delete queryObj[el]
-        })
-        const movies = await Movie.find(queryObj);
-        **************************************************/
-
+        
         res.status(200).json({
             status: 'success',
             length: movies.length,
